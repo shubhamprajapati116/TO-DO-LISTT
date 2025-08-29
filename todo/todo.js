@@ -110,7 +110,11 @@ taskForm.addEventListener("submit", (e) => {
   const text = taskInput.value.trim();
   const priority = prioritySelect.value;
 
-  if (text === "") return;
+  if (text === "") {
+    message.textContent ="⚠️ Task cannot be empty!";
+    return;
+  }
+    
 
   const newTask = {
     id: Date.now(),
