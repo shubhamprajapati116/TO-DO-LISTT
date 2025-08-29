@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --muted: #9ca3af;
+  --text: #f1f5f9;
+  --accent: #22c55e;
+  --danger: #ef4444;
+  --warn: #f59e0b;
+  --border: #334155;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 16px;
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 28px;
+}
+
+/* ---------------- FORM ---------------- */
+#taskForm {
+  display: grid;
+  grid-template-columns: 1fr 150px 100px;
+  gap: 8px;
+}
+
+#taskInput,
+select,
+button {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #0b1220;
+  color: var(--text);
+}
+
+#addBtn {
+  background-color: var(--accent);
+  border: none;
+  color: #06220e;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#addBtn:hover {
+  filter: brightness(1.1);
+}
+
+#message {
+  min-height: 1.25em;
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+
+/* ---------------- CONTROLS ---------------- */
+#controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0;
+}
+
+
+.filters label {
+  margin-right: 12px;
+  color: var(--muted);
+}
+
+.filters input {
+  margin-right: 4px;
+}
+
+#clearCompleted {
+  background: #14202f;
+  cursor: pointer;
+}
+
+/* ---------------- TASK LIST ---------------- */
+ul#taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 8px;
+  background: #0b1220;
+}
+/* .... */
+
+.task.completed .text {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+/* ---------------- PRIORITY ---------------- */
+#priority {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+
+.priority.low {
+ 
+  background: #0b2a1b;
+}
+.priority.medium {
+  background: #2a220b;
+}
+.priority.high {
+  background: #2a0b0b;
+}
+
+
+/* ---------------- UTILS ---------------- */
+.sr-only {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.stats {
+  margin-top: 14px;
+  color: var(--muted);
+}
+
+#clearCompleted {
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 600px) {
+  #taskForm {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #addBtn {
+    grid-column: span 2;
+  }
+
+  #controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+}
+

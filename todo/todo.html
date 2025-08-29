@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-Do List (Vanilla JS)</title>
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>To-Do List</h1>
+
+      <!-- ✅ Add Task Form -->
+      <form id="taskForm" autocomplete="off" aria-label="Add a new task">
+        <label class="sr-only" for="taskInput">Task</label>
+        <input
+          id="taskInput"
+          type="text"
+          placeholder="✍️ Write a task..."
+          required
+        />
+
+        <label class="sr-only" for="priority">Priority</label>
+        <select id="priority">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <button id="addBtn" type="submit">➕ Add</button>
+      </form>
+
+      <!-- ✅ Status message (accessible) -->
+      <p id="message" role="status" aria-live="polite"></p>
+
+      <!-- ✅ Filters + Clear Completed -->
+      <section class="controls">
+        <div class="filters" role="radiogroup" aria-label="Filter tasks">
+          <label>
+            <input type="radio" name="filter" value="all" checked /> All
+          </label>
+          <label>
+            <input type="radio" name="filter" value="active" /> Active
+          </label>
+          <label>
+            <input type="radio" name="filter" value="completed" /> Completed
+          </label>
+        </div>
+        <button id="clearCompleted" type="button">🧹 Clear Completed</button>
+      </section>
+
+      <!-- ✅ Task List -->
+      <ul id="taskList" aria-live="polite" aria-label="Task list"></ul>
+
+      <!-- ✅ Stats Footer -->
+      <footer class="stats">
+        <span id="totalCount">0</span> total •
+        <span id="doneCount">0</span> done •
+        <span id="leftCount">0</span> left
+      </footer>
+    </main>
+
+    <script src="todo.js"></script>
+  </body>
+</html>
