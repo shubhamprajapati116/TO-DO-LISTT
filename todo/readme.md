@@ -70,10 +70,5 @@ It provides the ability to **add, edit, delete, and mark tasks as completed**, w
 For any queries:  
 - Email: shubham.pjp1116@gmail.com
 
----
-<<<<<<< HEAD
-=======
 ## 🌐 Live Demo
- https://shubhamprajapati116.github.io/TO-DO-LISTT/todo.html/
->>>>>>> 9ee9d8de92696fbf89a93384b4c65b947c206162
-
+ https://shubhamprajapati116.github.io/TO-DO-LISTT/
