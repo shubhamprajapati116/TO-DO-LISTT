@@ -74,6 +74,6 @@ For any queries:
 <<<<<<< HEAD
 =======
 ## 🌐 Live Demo
- https://shubhamprajapati116.github.io/TO-DO-LISTT/
+ https://shubhamprajapati116.github.io/TO-DO-LISTT/todo.html/
 >>>>>>> 9ee9d8de92696fbf89a93384b4c65b947c206162
 
