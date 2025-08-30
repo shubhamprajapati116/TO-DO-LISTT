@@ -140,6 +140,7 @@ clearCompletedBtn.addEventListener("click", () => {
   tasks = tasks.filter((t) => !t.completed);
   saveTasks();
   renderTasks();
+  shubham
 });
 
 // ✅ First render
