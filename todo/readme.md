@@ -68,7 +68,6 @@ It provides the ability to **add, edit, delete, and mark tasks as completed**, w
 
 ## 📧 Contact
 For any queries:  
-- Email: info@unifiedmentor.com  
-- Website: [unifiedmentor.com](https://unifiedmentor.com)
+- Email: shubham.pjp1116@gmail.com
 
 ---
